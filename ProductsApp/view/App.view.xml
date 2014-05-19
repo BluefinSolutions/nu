@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mvc:View
+  controllerName="my.products.view.App"
+  displayBlock="true"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m">
+  <SplitApp id="idApp" mode="StretchCompressMode">
+    <masterPages>
+      <mvc:XMLView viewName="my.products.view.List" id="idViewList" />
+    </masterPages>
+    <detailPages>
+      <mvc:XMLView viewName="my.products.view.Detail" id="idViewDetail" />
+    </detailPages>
+  </SplitApp>
+</mvc:View>

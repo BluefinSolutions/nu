@@ -1,0 +1,22 @@
+<core:FragmentDefinition
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core">
+  <SelectDialog
+    title="Select Product"
+    confirm="onClose"
+    close="onClose"
+    items="{newproducts>/Products}">
+    <ObjectListItem
+      icon="sap-icon://product"
+      title="{newproducts>Name}"
+      number="{
+        path : 'newproducts>Price',
+        type : 'my.products.util.Formatter.price2dp'
+      }"
+      numberUnit="USD">
+      <attributes>
+        <ObjectAttribute text="{newproducts>Description}" />
+      </attributes>
+    </ObjectListItem>
+  </SelectDialog>
+</core:FragmentDefinition>

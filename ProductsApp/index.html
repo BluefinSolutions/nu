@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Products App</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8">
+    <script
+      _src="http://localhost:8888/sapui5/openui5-sdk-1.18.12/resources/sap-ui-core.js"
+      src="http://localhost:8888/sapui5/latest/resources/sap-ui-core.js"
+      id="sap-ui-bootstrap"
+      data-sap-ui-theme="sap_bluecrystal"
+      data-sap-ui-libs="sap.m"
+      data-sap-ui-xx-bindingSyntax="complex"
+      data-sap-ui-resourceroots='{
+        "my.products": "./"
+      }'
+      >
+    </script>
+
+    <script>
+      window._grab = sap.ui.getCore().byId;
+      new sap.m.Shell({
+        app : new sap.ui.core.ComponentContainer({
+          name : "my.products"
+        })
+      }).placeAt("content");
+    </script>
+
+  </head>
+  <body class="sapUiBody" id="content" />
+</html

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mvc:View
+  controllerName="my.products.view.Detail"
+  displayBlock="true"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m">
+  <Page
+    showNavButton="{device>/isPhone}"
+    navButtonPress="onNavPress"
+    title="Product">
+    <ObjectHeader
+      title="{Name}"
+      number="{
+        path : 'Price',
+        type : 'my.products.util.Formatter.price2dp'
+      }"
+      numberUnit="USD">
+      <attributes>
+        <ObjectAttribute text="{Description}" />
+      </attributes>
+    </ObjectHeader>
+    <IconTabBar>
+      <items>
+        <IconTabFilter
+          binding="{Supplier}"
+          text="Supplier">
+          <content>
+            <ObjectListItem
+              icon="sap-icon://factory"
+              title="{Name}"
+              intro="{Address/Country}">
+              <attributes>
+                <ObjectAttribute
+                  binding="{Address}"
+                  text="{Street}, {City}, {State} {ZipCode}" />
+              </attributes>
+            </ObjectListItem>
+          </content>
+        </IconTabFilter>
+      </items>
+    </IconTabBar>
+    <footer>
+      <Bar />
+    </footer>
+  </Page>
+</mvc:View>

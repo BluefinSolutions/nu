@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mvc:View
+  controllerName="my.products.view.List"
+  displayBlock="true"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m">
+  <Page
+    title="Products">
+    <List
+      id="idList"
+      items="{/Products}"
+      mode="{device>/listMode}"
+      select="onSelect">
+      <items>
+        <ObjectListItem
+          type="{device>/listItemType}"
+          press="onSelect"
+          title="{Name}"
+          number="{
+            path : 'Price',
+            type : 'my.products.util.Formatter.price2dp'
+          }"
+          numberUnit="USD">
+          <attributes>
+            <ObjectAttribute text="{Description}" />
+          </attributes>
+        </ObjectListItem>
+      </items>
+    </List>
+    <footer>
+      <Bar>
+        <contentRight>
+          <Button icon="sap-icon://add" press="onAddProduct" />
+        </contentRight>
+      </Bar>
+    </footer>
+  </Page>
+</mvc:View>

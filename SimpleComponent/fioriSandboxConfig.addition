@@ -1,0 +1,10 @@
+// Add this to fioriSandboxConfig.js
+// and test at:
+// http://localhost:8888/sapui5/sapui5-sdk-1.16.3/test-resources/sap/ushell/shells/sandbox/fioriSandbox.html
+
+"NU-SimpleComponent" : {
+   additionalInformation : "SAPUI5.Component=my.products",
+   applicationType : "URL",
+   url : "/projects/nu/SimpleComponent",
+   description : "NU Simple Component"
+},

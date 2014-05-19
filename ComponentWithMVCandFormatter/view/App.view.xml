@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mvc:View
+  controllerName="my.products.view.App"
+  displayBlock="true"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m">
+
+  <Input value="{/name}" />
+  <Button text="Greet" press="onPress" />
+  <Button
+    text="{
+      path : '/info/now',
+			type : 'my.products.util.Formatter.ddmmyyyy'
+    }"
+    enabled="false"
+  />
+  <Button
+    text="{
+      path : '/info/pi',
+			type : 'sap.ui.model.type.Float',
+      formatOptions : {
+        maxFractionDigits : 2
+      }
+    }"
+    enabled="false"
+  />
+</mvc:View>
