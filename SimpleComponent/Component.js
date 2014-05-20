@@ -10,7 +10,7 @@ sap.ui.core.UIComponent.extend("my.products.Component", {
   },
 
   createContent : function() {
-    return new sap.m.VBox({
+    return new sap.m.HBox({
       items: [
         new sap.m.Input("idName"),
         new sap.m.Button({
