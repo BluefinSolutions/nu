@@ -29,10 +29,6 @@ sap.ui.core.UIComponent.extend("my.products.Component", {
     oDeviceModel.setDefaultBindingMode("OneWay");
     this.setModel(oDeviceModel, "device");
 
-    // var sNewProductsURL = "http://localhost/qmacro/newproducts";
-    // var oNewProductsModel = new sap.ui.model.json.JSONModel(sNewProductsURL);
-    // this.setModel(oNewProductsModel, "newproducts");
-
     return sap.ui.view("idViewApp", {
       viewName : "my.products.view.App",
       type : "XML"
