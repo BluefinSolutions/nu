@@ -1,4 +1,4 @@
 nu
 ==
 
-Newcastle University
+Hands-on Exercises Reference
